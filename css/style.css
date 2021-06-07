@@ -3644,6 +3644,9 @@ ul.profile-contact-menu {
 .inbox-bt-mg{
     margin-bottom:15px;
 }
+li{
+  text-align: left;
+}
 /* ---------------------------------------------------
     SIDEBAR STYLE
 ----------------------------------------------------- */
