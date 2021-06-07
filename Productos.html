@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <title>Slideshow Images</title>
+    <meta http-equiv="content-type" content="text/plain; charset=UTF-8"/>
+    <script src="https://pagecdn.io/lib/hammer/2.0.8/hammer.js" crossorigin="anonymous"  ></script>
+    <script src="https://kit.fontawesome.com/19435a3960.js" crossorigin="anonymous"></script>
+    <script src="js/functional/slideshow.min.js"></script>
+  </head>
+  <body  onload="load()" style="text-align:center;">
+    <div class="bss-slides num1" tabindex="1">
+   <figure id="triplay">
+      <img src="images/triplay_wide.png" width="100%"  /><figcaption>Triplay y aglomerados </figcaption>
+   </figure>
+    <figure id="mesa">
+        <img src="images/mesa_wide.png" width="100%" /><figcaption>Maderas Preciosas</figcaption>
+   </figure>
+   <figure id="construccion">
+      <img src="images/construccion_wide.png" width="100%" /><figcaption>Madera para construccion </figcaption>
+   </figure>
+   <figure id="pisos">
+      <img src="images/pisos_wide.png" width="100%" /><figcaption>Pisos y Lambrines </figcaption>
+   </figure>
+   <figure id="protector">
+      <img src="images/protector_wide.png" width="100%" /><figcaption>Protectores y pegamentos </figcaption>
+   </figure>
+</div> <!-- // bss-slides -->
+<div id="div_triplay">
+  <h1 style="text-align:center; padding-right:20%; padding-top:5%;"> Triplay, aglomerados y enchapados</h1>
+  <div class="limit" style="padding-right:20%; padding-left:10%;">
+    <p>
+      Ya sea para construccion, carpinteria o cualquier uso que requiera contamos con Triplays y aglomerados en todas sus medidas
+      , de marcas de reconocimiento internacional y con amplia gama de especies en el caso de los enchapados.
+    </p>
+  </div>
+
+</div>
+<div id="div_madera" style="display:none">
+  <h1 style="text-align:center; padding-right:20%; padding-top:5%;"> Maderas Preciosas</h1>
+  <div class="limit" style="padding-right:20%; padding-left:10%;">
+    <p>
+      Ofrecemos gran variedad de maderas preciosas, asi como madera de pino estufado, para cualquier proyecto, algunas de las especies que
+      le ofrecemos son:
+    </p>
+    <p>
+    <div style="float: left; width: 50%;">
+
+        <li> Caoba</li>
+        <li> Cedro Rojo</li>
+        <li> Encino Americano</li>
+        <li> Tzalam</li>
+        <li> Maple</li>
+        <li> Banack</li>
+
+    </div>
+    <div style="float: right; width: 50%;">
+        <li> Okume</li>
+        <li> Cumaru</li>
+        <li> Violeta</li>
+        <li> Teca</li>
+        <li> Huanacastle</li>
+    </div>
+  </p>
+  </div>
+</div>
+<div id="div_construccion" style="display:none">
+  <h1 style="text-align:center; padding-right:20%; padding-top:5%;"> Madera de construccion</h1>
+  <div class="limit" style="padding-right:20%; padding-left:10%;">
+    <p>
+      Contamos con toda la madera de construccion que requiere para su obra, tal como:
+      <li> Polín</li>
+      <li> Barrote</li>
+      <li> Triplay para cimbra normal y de alto rendimiento en todos sus gruesos</li>
+    </p>
+  </div>
+</div>
+<div id="div_pisos" style="display:none">
+  <h1 style="text-align:center; padding-right:20%; padding-top:5%;">  Pisos y Lambrines</h1>
+  <div class="limit" style="padding-right:20%; padding-left:10%;">
+    <p>
+      Contamos con una variedad de pisos, decks y lambrines para darle el mejor terminado a su casa u oficina, disponibles en gran variedad
+      de tamaños y especies tales como:
+      <li> Encino Americano</li>
+      <li> Pino </li>
+      <li> Tzalam </li>
+      <li> Cumaru </li>
+      <li> Maple </li>
+      <li> Nogal </li>
+      <li> Capirona </li>
+      <li> Y muchos mas...</li>
+    </p>
+  </div>
+</div>
+<div id="div_protector" style="display:none">
+  <h1 style="text-align:center; padding-right:20%; padding-top:5%;"> Protectores y Pegamentos</h1>
+  <div class="limit" style="padding-right:20%; padding-left:10%;">
+    <p>
+      Contamos con una variedad de pegamentos, asi como productos de tratamiento de madera, tales como:
+      <li> Vidamadera</li>
+      <li> Pegamento Carpenters </li>
+      <li> Lasur </li>
+      <li> Productos Presto</li>
+      <li> Y muchos mas...</li>
+    </p>
+  </div>
+</div>
+</body>
+  <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700" rel="stylesheet">
+
+	<link rel="stylesheet" href="css/animate.css">
+	<link rel="stylesheet" href="css/icomoon.css">
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/flexslider.css">
+	<link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
+	<link rel="stylesheet" href="css/owl.carousel.min.css">
+	<link rel="stylesheet" href="css/owl.theme.default.min.css">
+	<link rel="stylesheet" href="css/style.css">
+
+</html>
+
+<script>
+triplay=document.getElementById('triplay')
+mesa=document.getElementById('mesa')
+construccion=document.getElementById('construccion')
+pisos=document.getElementById('pisos')
+protectores=document.getElementById('protector')
+
+triplayDiv=document.getElementById('div_triplay')
+maderaDiv=document.getElementById('div_madera')
+construccionDiv=document.getElementById('div_construccion')
+pisosDiv=document.getElementById('div_pisos')
+protectoresDiv=document.getElementById('div_protector')
+
+function setText(){
+  if(triplay.className!="bss-show"){
+    triplayDiv.style.display = 'none';
+  }else{
+    triplayDiv.style.display = 'block';          // Show
+  }
+  if(mesa.className!="bss-show"){
+    maderaDiv.style.display = 'none';
+  }else{
+    maderaDiv.style.display = 'block';          // Show
+  }
+  if(construccion.className!="bss-show"){
+    construccionDiv.style.display = 'none';
+  }else{
+    construccionDiv.style.display = 'block';          // Show
+  }
+  if(pisos.className!="bss-show"){
+    pisosDiv.style.display = 'none';
+  }else{
+    pisosDiv.style.display = 'block';          // Show
+  }
+  if(protectores.className!="bss-show"){
+    protectoresDiv.style.display = 'none';
+  }else{
+    protectoresDiv.style.display = 'block';          // Show
+  }
+}
+
+function load(){
+  var opts = {
+      auto : false,
+      fullScreen : false,
+      swipe : true
+  };
+  makeBSS('.num1', opts);
+  setInterval(setText,100)
+}
+
+</script>

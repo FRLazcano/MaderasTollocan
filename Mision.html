@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Slideshow Images</title>
+    <meta http-equiv="content-type" content="text/plain; charset=UTF-8"/>
+    <script src="https://kit.fontawesome.com/19435a3960.js" crossorigin="anonymous"></script>
+  </head>
+  <body style="text-align:left; " >
+      <img src="images/mesa.jpg" id="foto" class="slide">
+      <h1 style="text-align:center; padding-right:20%; padding-top:5%;"> Quienes Somos</h1>
+      <div class="limit" style="padding-right:20%; padding-left:10%;">
+        <p>
+        <b> En Comercializadora de Tableros y Maderas Tollocan S.A. de C.V.</b> somos una empresa ubicada en Toluca, Estado de México, dedicada a la venta de madera aserrada y triplay en sus diversas especies y usos, así como derivados y complementos de madera.
+        Contamos con alianzas con productores de diversos estados del país, al igual que con grandes importadores de triplay para contar con el abasto suficiente de materias primas de calidad a un precio competitivo.
+        Sumamos 36 años dando solución a todas tus necesidades de madera y triplay en Toluca, gracias a nuestro extenso catálogo de productos podemos ofrecerte los que mejor cumplan con tus necesidades.
+        Ofrecemos nuestras maderas y triplay a la industria de la construcción y en general, carpinteros, fabricantes de muebles y a particulares. Somos fabricantes e importadores de países como Brasil, Chile, EUA, Indonesia y Filipinas. Además, trabajamos bajo los estatutos marcados en la NOM-144-SEMARNAT.
+        </p>
+      </div>
+  </body>
+  <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700" rel="stylesheet">
+
+	<link rel="stylesheet" href="css/animate.css">
+	<link rel="stylesheet" href="css/icomoon.css">
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/flexslider.css">
+	<link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
+	<link rel="stylesheet" href="css/owl.carousel.min.css">
+	<link rel="stylesheet" href="css/owl.theme.default.min.css">
+	<link rel="stylesheet" href="css/style.css">
+</html>
+
+
+<script>
+    //Modify the src attribute of the image with the ID "myImage"
+    function scroll(){
+      foto=document.getElementById("foto")
+      muebles=[]
+      selected=[]
+      pass=0;
+      for(let i=0; i<12; i++){
+        muebles.push('muebles'+i)
+      }
+      index=Math.floor(Math.random() * muebles.length)
+      foto.src='images/'+muebles[index]+'.jpg'
+    }
+    function load(){
+      setInterval(scroll, 5000)
+    }
+    document.getElementById("myImage").src = 'img/new-image.jpg';
+</script>
